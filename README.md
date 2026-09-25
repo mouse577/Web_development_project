@@ -13,6 +13,4 @@ See each folder's README for development setup and run instructions.
 
 ## My contribution
 
-## My contribution
-
 I worked on the Flask backend and its unit tests. My contributions included backend functionality for the application's data and API workflows, along with tests covering users, tasks, wallets, transactions, avatar features, and customization.
