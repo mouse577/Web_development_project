@@ -1,0 +1,9 @@
+.placeholderDiv {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--dark-mode-text);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

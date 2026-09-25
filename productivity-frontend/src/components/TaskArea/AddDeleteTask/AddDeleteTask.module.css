@@ -1,0 +1,27 @@
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupContent {
+  background-color: darkred;
+  color: var(--dark-mode-text);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.addDeleteTaskForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.addDeleteTaskForm > * {
+  margin: 5px;
+}

@@ -1,0 +1,10 @@
+.taskListDiv {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.show-complete-btn{
+  padding: 0.5em;
+  font-size: 10px;
+  }

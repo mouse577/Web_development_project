@@ -1,0 +1,9 @@
+# This is like a package.json, will pre-install when a container spins up
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+flask-cors
+psycopg2-binary
+python-dotenv
+bcrypt
+PyJWT

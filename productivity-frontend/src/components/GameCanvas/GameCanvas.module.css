@@ -1,0 +1,203 @@
+.gameCanvasDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gameCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1.2 / 1;  /* Controls shape */
+  outline: 2px solid red;
+}
+
+/* Full height on parent container */
+html, body, #root, .taskPageDiv, .gameAreaDiv {
+  height: 100%;
+}
+
+/* INVENTORY MENU */
+.inventoryBtnDiv {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 10%;
+  bottom: 5%;
+  background-image: url(/public/menu_box.svg);
+  background-color: rgb(158, 218, 134);
+  /* masks let us change background colors with css, but keep the shape of the background image */
+  mask-image: url(/public/menu_box_mask.svg);
+}
+
+.inventoryIconDiv{
+  width: inherit;
+  height: auto;
+  cursor: pointer;
+}
+
+.inventoryIcon {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  padding: 8%;
+  z-index:2;
+}
+
+.inventoryDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: inherit;
+}
+
+.inventoryTabDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10%; 
+  padding-top: max(20px, 2%);
+}
+
+.inventroyTab {
+  width: 25%;
+  min-width: 100px;
+  max-width: 200px;
+  height: 100%;
+  min-height: 50px;
+  background-image: url(/public/tab_box.svg);
+  background-size: 100% 100%;
+  background-color: white;
+  mask-image: url(/public/tab_box_mask.svg);
+  mask-size: 100% 100%;
+  cursor: pointer;
+}
+
+.inventoryCurrencyDiv {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 25%;
+  
+}
+
+.inventoryCurrencyIconDiv {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  margin-left: auto;
+}
+
+.currencyIcon {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+}
+
+.inventoryCurrencyCount {
+  display: flex;
+  min-width: 50%;
+  max-width: 100%;
+  height: inherit;
+  margin: 0;
+  padding-left: 10px;
+  overflow: hidden; 
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.inventroyTab:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.inventoryTabText {
+  display: flex;
+  height: inherit;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.inventoryGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* makes 3 columns */
+  width: calc(70% + 11px);            /* 11px offset for scrollbar */
+  max-height: 80%;                    /* leave room at the bottom for other UI */
+  text-align: center;
+  overflow-y: scroll;
+  scrollbar-width: 10px;
+  scrollbar-gutter: stable; 
+  scrollbar-color: transparent transparent; /* hides scrollbar until we hover over the div */
+}
+
+.inventoryGrid:hover {
+  /* makes scrollbar white, but background (or "gutter") transparent */
+  scrollbar-color: rgb(225, 225, 225) transparent;  
+}
+
+.inventoryGridItem {
+  position: relative;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.inventoryItemBox {
+  position: absolute;
+  top: calc(50% - 55px);
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 110px;
+  background-image: url(/public/menu_box.svg);
+  background-color: white;
+  mask-image: url(/public/menu_box_mask.svg);
+  z-index: 0;
+  cursor: pointer;
+}
+
+.inventoryGridItemText {
+  position: relative;
+  top: calc(80% - 5px);
+  height: 20%;
+  margin: 0;
+  align-self: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 15px;
+  color: black;
+  z-index: 1;
+}
+
+.inventoryPurchaseDiv{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 10%;
+  width: 30%;
+  left: 70%;
+  /* top: 80%; */
+  
+}
+
+.inventoryPurchaseButton {
+  margin: auto;
+}
+
+.inventoryCostText {
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+.navList > li > * {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+.navList{
+  min-width: 350px;
+  min-height: 60px;
+}
+
+.navList > li {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}

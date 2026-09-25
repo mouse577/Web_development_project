@@ -1,0 +1,17 @@
+.gameDiv {
+  flex: 0 0 80%;
+  height: 100vh;
+}
+
+.taskDiv {
+  flex: 0 0 20%;
+  height: 100vh;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .gameDiv,
+  .taskDiv {
+    flex: 0 0 100%;
+  }
+}

@@ -1,0 +1,15 @@
+:root {
+  --dark-mode-background: rgb(40, 40, 40);
+  --dark-mode-text: white;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-mode-background);
+  color: var(--dark-mode-text);
+  font-family: var(--font-family);
+}
